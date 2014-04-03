@@ -70,7 +70,6 @@ public class GetOptionSets extends HttpServlet {
 		/* display models from remote server via HTML */
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
-		// modelName = request.getParameter("selectedModel");
 		if (modelName == null || modelName.equals("")){
 			response.sendRedirect("GetModels");
 			if (DEBUG) System.out.println("Error: failed to select a model");
