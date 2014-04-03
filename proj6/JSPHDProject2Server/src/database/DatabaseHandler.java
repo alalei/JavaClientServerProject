@@ -133,7 +133,7 @@ public class DatabaseHandler implements DatabaseCRUD {
 		if (!createStatement())
 			return false;
 		
-		/* Execute a query */
+		// Execute a query 
 		try{
 			if (DEBUG) System.out.println("Execute Query SQL: " + sql);
 			resultSet = statement.executeQuery(sql);
@@ -218,13 +218,13 @@ public class DatabaseHandler implements DatabaseCRUD {
 		if (tableSQLs == null || tableSQLs.equals("")){
 			return false;
 		}
-		/* wake a valid connection */
+		// wake a valid connection 
 		if ( !checkConnection() ){
 			if (DEBUG) System.out.println("Error: checkConnection()");
 			return false;
 		}
 		
-		/* add model into the table */
+		// add model into the table 
 		for (String tableSQLStatement: tableSQLs){
 			if (tableSQLStatement == null) continue;
 			if (DEBUG2) System.out.println("Executing: " + tableSQLStatement);
@@ -235,17 +235,7 @@ public class DatabaseHandler implements DatabaseCRUD {
 				if (DEBUG2) System.out.println("create a table successfully\n");
 			}
 		}
-		/*
-		String sql;
-		// check whether the table exist
-		sql = "SHOW TABLES LIKE '%" + tableName + "%'";
-		executeQuery(sql); // hidden operation: resultSet = executeQuery(sql)
-		if (resultSet == null){
-			if (DEBUG) System.out.println("executeQuery(): failed to execute the query");
-			return false;
-		}
-		*/
-		// closeConnection();
+		
 		return true;
 	}
 	
@@ -256,7 +246,7 @@ public class DatabaseHandler implements DatabaseCRUD {
 		if (automobile == null){
 			return false;
 		}
-		/* generate SQL */
+		// generate SQL
 		// add to TABLE automobile
 		String sql = null;
 		sql = "INSERT INTO automobile (name, model, make, baseprice) "
@@ -276,7 +266,7 @@ public class DatabaseHandler implements DatabaseCRUD {
 		}
 		if (DEBUG) System.out.println("modelAtoIncKey: " + modelAtoIncKey);
 		
-		/* wake a valid connection */
+		// wake a valid connection 
 		if ( !checkConnection() ){
 			if (DEBUG) System.out.println("Error: checkConnection()");
 			return false;
@@ -322,13 +312,13 @@ public class DatabaseHandler implements DatabaseCRUD {
 		if (tableSQLs == null || tableSQLs.equals("")){
 			return false;
 		}
-		/* wake a valid connection */
+		// wake a valid connection 
 		if ( !checkConnection() ){
 			if (DEBUG) System.out.println("Error: checkConnection()");
 			return false;
 		}
 		
-		/* insert model data into the table */
+		// insert model data into the table 
 		for (String tableSQLStatement: tableSQLs){
 			if (tableSQLStatement == null) continue;
 			if (DEBUG2) System.out.println("Executing: " + tableSQLStatement);
@@ -349,7 +339,7 @@ public class DatabaseHandler implements DatabaseCRUD {
 	public int[] getID(String colName){
 		if (resultSet == null){
 			if (DEBUG) System.out.println("Exception: resultSet is null");
-			return null;//Integer.MIN_VALUE;
+			return null;
 		}
 		LinkedList<String> IDlist = new LinkedList<String>();
 		try{
@@ -378,7 +368,7 @@ public class DatabaseHandler implements DatabaseCRUD {
 		if (automobile == null){
 			return false;
 		}
-		/* generate SQL */
+		// generate SQL 
 		// check primary keys TABLE automobile
 		String sql = null;
 		sql = "SELECT auto_id FROM automobile WHERE name = '" + automobile.getName()+ "' ;" ;
@@ -391,7 +381,7 @@ public class DatabaseHandler implements DatabaseCRUD {
 		}
 		if (DEBUG) System.out.println("modelAtoIncKey: " + modelAtoIncKey);
 		
-		/* wake a valid connection */
+		// wake a valid connection
 		if ( !checkConnection() ){
 			if (DEBUG) System.out.println("Error: checkConnection()");
 			return false;
@@ -453,7 +443,7 @@ public class DatabaseHandler implements DatabaseCRUD {
 		if (automobile == null){
 			return false;
 		}
-		/* wake a valid connection */
+		// wake a valid connection
 		if ( !checkConnection() ){
 			if (DEBUG) System.out.println("Error: checkConnection()");
 			return false;
@@ -504,25 +494,6 @@ public class DatabaseHandler implements DatabaseCRUD {
 				if (DEBUG2) System.out.println("optsetAutoIncKey: " + setIDKey);
 				String[] optionNames = automobile.getOptionNames(setName);
 				if (optionNames == null) continue;
-				/*
-				for(String optName: optionNames){
-					sql = "SELECT S.opt_id FROM set_opt AS S, optionunit AS U "
-							+ " WHERE S.opt_id = U.opt_id "
-							+ " AND S.set_opt = " + setIDKey 
-							+ " AND U.name = '" + optName + "';";
-					if (!executeQuery(sql)){
-						return false;
-					}
-					int[] optIncKey = getID("opt_id");
-					if (optIncKey == null){
-						if (DEBUG) System.out.println("No valid optsetAutoIncKey.");
-						// create new
-					}else{
-						if (DEBUG) System.out.println("Option ID: " + optIncKey[0]);
-					}
-					
-				}
-				*/
 			}
 		}
         return true;
@@ -536,13 +507,13 @@ public class DatabaseHandler implements DatabaseCRUD {
 		if (tableSQLs == null || tableSQLs.equals("")){
 			return false;
 		}
-		/* wake a valid connection */
+		// wake a valid connection 
 		if ( !checkConnection() ){
 			if (DEBUG) System.out.println("Error: checkConnection()");
 			return false;
 		}
 		
-		/* delete model data into the table */
+		// delete model data into the table
 		for (String tableSQLStatement: tableSQLs){
 			if (tableSQLStatement == null) continue;
 			if (DEBUG) System.out.println("Executing SQL: " + tableSQLStatement);
@@ -565,7 +536,7 @@ public class DatabaseHandler implements DatabaseCRUD {
 		dbHandler = new DatabaseHandler();
 		dbHandler.registerDriver();
 		
-		/* Load automobile from file */
+		// Load automobile from file 
 		System.out.println("\nTest 1: Open connection");
 		BuildAuto builtauto = new BuildAuto();
 		Automobile automobile = builtauto.buildAuto("txt","sqlStatements/testdata2.txt");
