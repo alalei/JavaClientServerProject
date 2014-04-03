@@ -1,0 +1,4 @@
+INSERT INTO optionset
+(set_id, name)
+VALUES
+(10, color);

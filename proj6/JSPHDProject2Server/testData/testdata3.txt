@@ -1,0 +1,48 @@
+NEW Automobile
+Automobile,base price,18445
+Automobile,name,Ford Focus Wagon ZTW
+Automobile,make,Ford
+Automobile,model,ZTW
+OptionSet,color,black,0
+OptionSet,color,red,1000
+OptionSet,transmission,Manual,-815
+OptionSet,transmission,automatic,0
+OptionSet,brakes/traction control,standard,0
+OptionSet,brakes/traction control,ABS,400
+OptionSet,side impact air bags,no,0
+OptionSet,side impact air bags,selected,200
+OptionSet,power moonroof,no,0
+OptionSet,power moonroof,selected,199
+END Automobile
+
+NEW Automobile
+Automobile,base price,21315
+Automobile,name,Audi A4
+Automobile,make,Audi
+Automobile,model,A4
+OptionSet,color,black,0
+OptionSet,color,white,0
+OptionSet,transmission,standard,0
+OptionSet,transmission,Manual,-307
+OptionSet,brakes/traction control,standard,0
+OptionSet,brakes/traction control,ABS,400
+OptionSet,brakes/traction control,Advance Trac,1225
+OptionSet,side impact air bags,standard,350
+OptionSet,power moonroof,no,0
+OptionSet,power moonroof,selected,595
+END Automobile
+
+NEW Automobile
+Automobile,base price,13000
+Automobile,name,Ford's Focus Wagon (sales promotion)
+Automobile,make,Ford
+Automobile,model,ZTW2
+OptionSet,color,black,0
+OptionSet,transmission,Manual,0
+OptionSet,transmission,automatic,100
+OptionSet,brakes/traction control,standard,0
+OptionSet,brakes/traction control,ABS,400
+OptionSet,side impact air bags,none,0
+OptionSet,side impact air bags,selected,200
+OptionSet,power moonroof,no,0
+END Automobile

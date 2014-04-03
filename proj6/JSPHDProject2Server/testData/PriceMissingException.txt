@@ -1,0 +1,1 @@
+PriceMissingException: missing price for Automobile in Text file

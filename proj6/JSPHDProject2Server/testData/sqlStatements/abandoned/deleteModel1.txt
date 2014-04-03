@@ -1,0 +1,51 @@
+NEW
+DELETE FROM set_opt 
+WHERE bind_id = 601;
+END
+
+NEW
+DELETE FROM set_opt 
+WHERE bind_id=500;
+END
+
+NEW
+DELETE FROM set_opt 
+WHERE bind_id=501;
+END
+
+NEW
+DELETE FROM auto_optset 
+WHERE bind_id=50;
+END
+
+NEW
+DELETE FROM automobile 
+WHERE auto_id=1;
+END
+
+NEW
+DELETE FROM optionset 
+WHERE set_id=10;
+END
+
+NEW
+DELETE FROM optionunit 
+WHERE opt_id=100;
+END
+
+NEW
+DELETE FROM optionunit 
+WHERE opt_id=101;
+END
+
+NEW
+DELETE FROM optionset 
+WHERE set_id=11;
+END
+
+NEW
+DELETE FROM optionunit 
+WHERE opt_id=200;
+END
+
+

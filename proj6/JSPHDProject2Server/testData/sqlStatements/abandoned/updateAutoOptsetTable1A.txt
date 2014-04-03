@@ -1,0 +1,4 @@
+INSERT INTO auto_optset
+(bind_id, auto_id, set_id);
+VALUES
+(50, 1, 10);

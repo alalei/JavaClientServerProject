@@ -1,0 +1,44 @@
+NEW
+CREATE TABLE automobile
+(auto_id int NOT NULL AUTO_INCREMENT,
+name VARCHAR(255),
+model VARCHAR(255),
+make VARCHAR(255),
+baseprice int,
+PRIMARY KEY (auto_id));
+END
+
+NEW
+CREATE TABLE optionset
+(set_id int NOT NULL AUTO_INCREMENT,
+name VARCHAR(255), 
+PRIMARY KEY (set_id));
+END
+
+NEW
+CREATE TABLE optionunit
+(opt_id int NOT NULL AUTO_INCREMENT,
+name VARCHAR(255),
+price int,
+PRIMARY KEY (opt_id));
+END
+
+NEW
+CREATE TABLE auto_optset
+(bind_id int NOT NULL AUTO_INCREMENT,
+auto_id int,
+set_id int,
+PRIMARY KEY (bind_id),
+FOREIGN KEY (auto_id) REFERENCES automobile (auto_id),
+FOREIGN KEY (set_id) REFERENCES optionset (set_id));
+END
+
+NEW
+CREATE TABLE set_opt
+(bind_id int NOT NULL AUTO_INCREMENT,
+set_id int,
+opt_id int,
+PRIMARY KEY (bind_id),
+FOREIGN KEY (set_id) REFERENCES optionset (set_id),
+FOREIGN KEY (opt_id) REFERENCES optionunit (opt_id));
+END

@@ -1,0 +1,11 @@
+NEW Automobile
+Automobile,base price,18445
+Automobile,name,Ford Focus Wagon ZTW
+Automobile,make,Ford
+Automobile,model,ZTW
+OptionSet,color,black,0
+OptionSet,transmission,automatic,0
+OptionSet,brakes/traction control,standard,0
+OptionSet,side impact air bags,none,0
+OptionSet,power moonroof,none,0
+END Automobile

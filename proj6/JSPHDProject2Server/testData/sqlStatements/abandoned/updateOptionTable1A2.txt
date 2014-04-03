@@ -1,0 +1,4 @@
+INSERT INTO option
+(opt_id, name, price, set_id")
+VALUES
+(101, red, 1000, 50);

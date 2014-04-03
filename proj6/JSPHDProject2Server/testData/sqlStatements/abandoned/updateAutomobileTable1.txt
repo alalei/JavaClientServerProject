@@ -1,0 +1,4 @@
+INSERT INTO automobile
+(auto_id, name, model, make, baseprice)
+VALUES
+(1, Ford's Wagon ZTW, ZTW, Ford, 18445);

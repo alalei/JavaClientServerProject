@@ -1,0 +1,41 @@
+NEW
+INSERT INTO automobile
+(name, model, make, baseprice)
+VALUES
+('Ford Wagon ZTW', 'ZTW', 'Ford', 18445);
+END
+
+NEW
+INSERT INTO optionset
+(name)
+VALUES
+('color');
+END
+
+NEW
+INSERT INTO optionunit
+(name, price)
+VALUES
+('black', 0);
+END
+
+NEW
+INSERT INTO optionunit
+(name, price)
+VALUES
+('red', 1000);
+END
+
+NEW
+INSERT INTO optionset
+(name)
+VALUES
+('transmission');
+END
+
+NEW
+INSERT INTO optionunit
+(name, price)
+VALUES
+('standard', 0);
+END

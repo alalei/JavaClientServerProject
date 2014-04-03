@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+/**
+ * Project 1 for 18641 Java Smart Phone
+ * 
+ * Author: Xuping Lei
+ * xlei@andrew.cmu.edu
+ * 
+ * Version: 1.5
+ * Created at:	Mar.2, 2014
+ * 
+ * web configuration information
+ */ 
+-->
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+                      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+  version="3.0"
+  metadata-complete="true">
+
+  <display-name>Client Terminal</display-name>
+  <description>
+     Interface to interact with the server
+  </description>
+
+
+<!-- 
+	Define servlets that interacts with Client class:
+	1. Get the list of available models;
+	2. Get the data for the list of available OptionSets.
+	
+-->
+    <servlet>
+      <servlet-name>GetModels</servlet-name>
+      <servlet-class>coreservlets.GetModels</servlet-class>
+    </servlet>
+	<servlet-mapping>
+        <servlet-name>GetModels</servlet-name>
+        <url-pattern>/GetModels</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+      <servlet-name>GetOptionSets</servlet-name>
+      <servlet-class>coreservlets.GetOptionSets</servlet-class>
+    </servlet>
+	<servlet-mapping>
+        <servlet-name>GetOptionSets</servlet-name>
+        <url-pattern>/GetOptionSets</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+      <servlet-name>UpdateModel</servlet-name>
+      <servlet-class>coreservlets.UpdateModel</servlet-class>
+    </servlet>
+	<servlet-mapping>
+        <servlet-name>UpdateModel</servlet-name>
+        <url-pattern>/UpdateModel</url-pattern>
+    </servlet-mapping>
+ 
+    
+</web-app>

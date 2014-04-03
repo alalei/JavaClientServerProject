@@ -1,0 +1,13 @@
+NEW Automobile
+Automobile,make,Ford
+Automobile,model,ZTW2
+Automobile,base price,20000
+Automobile,name,Ford Wagon ZTW
+OptionSet,color,red,0
+OptionSet,transmission,standard,-815
+OptionSet,brakes/traction control,ABS,400
+OptionSet,brakes/traction control,Advance Trac,1225
+OptionSet,side impact air bags,advanced,350
+OptionSet,power moonroof,no,0
+OptionSet,power moonroof,selected,595
+END Automobile

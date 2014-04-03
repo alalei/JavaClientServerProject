@@ -1,0 +1,9 @@
+NEW Automobile
+Automotive,base price,18445
+Automotive,name,Ford's Wagon ZTW 2
+OptionSet,color,red
+OptionSet,transmission,standard,-815
+OptionSet,brakes/traction control,ABS,400
+OptionSet,side impact air bags,selected,350
+OptionSet,power moonroof,selected,595
+END Automobile

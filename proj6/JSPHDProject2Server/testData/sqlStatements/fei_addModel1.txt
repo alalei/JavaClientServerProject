@@ -1,0 +1,69 @@
+NEW
+INSERT INTO automobile
+(auto_id, name, model, make, baseprice)
+VALUES
+(1, 'Ford Wagon ZTW', 'ZTW', 'Ford', 18445);
+END
+
+NEW
+INSERT INTO optionset
+(set_id, name)
+VALUES
+(10, 'color');
+END
+
+NEW
+INSERT INTO auto_optset
+(bind_id, auto_id, set_id)
+VALUES
+(50, 1, 10);
+END
+
+NEW
+INSERT INTO optionunit
+(opt_id, name, price)
+VALUES
+(100, 'black', 0);
+END
+
+NEW
+INSERT INTO optionunit
+(opt_id, name, price)
+VALUES
+(101, 'red', 1000);
+END
+
+NEW
+INSERT INTO set_opt
+(bind_id,set_id,opt_id)
+VALUES
+(500, 10, 100);
+END
+
+NEW
+INSERT INTO set_opt
+(bind_id,set_id,opt_id)
+VALUES
+(501, 10, 101);
+END
+
+NEW
+INSERT INTO optionset
+(set_id, name)
+VALUES
+(11, 'transmission');
+END
+
+NEW
+INSERT INTO optionunit
+(opt_id, name, price)
+VALUES
+(200, 'standard', 0);
+END
+
+NEW
+INSERT INTO set_opt
+(bind_id,set_id,opt_id)
+VALUES
+(601, 11, 200);
+END
